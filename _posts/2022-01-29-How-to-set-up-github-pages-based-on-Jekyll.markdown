@@ -12,7 +12,7 @@ Before uploading: `bundle exec jekyll serve --livereload`, `livereload` enables 
 
 Upload: commit first (need write some summary),then push origin.![summary]({{site.url}}/images/post1-1.jpg)
 
-Tips: pictures in post need use `![]({{site.url}}/images/xxx.jpg)`
+Tips: pictures in post need use `![](\{\{site.url\}\}/images/xxx.jpg)`
 
 TODO: paper link. 
 
