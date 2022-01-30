@@ -1,9 +1,17 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "How to set up github pages based on Jekyll"
 date:   2022-01-29 16:58:04 +0800
 categories: jekyll update
 ---
+## How to update homesite:
+
+You can update the `index.md` , then publish the whole repository in github desktop on macbook pro, the root directory is `~/myblog`, the repository name is  `cloudcatcher888.github.io`. Attention that the repository name of github pages should be lowercase and be `<username>.github.io`.
+
+TODO: paper link. 
+
+## How to create a posts: 
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:

@@ -7,7 +7,7 @@ layout: home
 
 <div align=center><img width = '150' height ='250' src ="images/portrait.jpeg"/></div>
 
-# <center>Zhikai Wang(Daniel)</center>
+# <center>Daniel Wong(王智恺)</center>
 
 
 
