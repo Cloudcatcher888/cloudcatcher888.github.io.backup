@@ -8,9 +8,11 @@ categories: jekyll update
 
 You can update the `index.md` , then publish the whole repository in github desktop on macbook pro, the root directory is `~/myblog`, the repository name is  `cloudcatcher888.github.io`. Attention that the repository name of github pages should be lowercase and be `<username>.github.io`.
 
-Before uploading: `bundle exec jekyll serve --livereload`, `livereload` ennable the instant preview of site.
+Before uploading: `bundle exec jekyll serve --livereload`, `livereload` enables the instant preview of site.
 
 Upload: commit first (need write some summary),then push origin.![summary]({{site.url}}/images/post1-1.jpg)
+
+Tips: pictures in post need use `![]({{site.url}}/images/xxx.jpg)`
 
 TODO: paper link. 
 
