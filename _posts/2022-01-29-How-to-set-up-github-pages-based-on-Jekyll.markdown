@@ -10,7 +10,7 @@ You can update the `index.md` , then publish the whole repository in github desk
 
 Before uploading: `bundle exec jekyll serve --livereload`, `livereload` ennable the instant preview of site.
 
-Upload: commit first (need write some summary),then push origin.![summary](../images/post1-1.jpg)
+Upload: commit first (need write some summary),then push origin.![summary](images/post1-1.jpg)
 
 TODO: paper link. 
 
