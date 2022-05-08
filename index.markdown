@@ -21,7 +21,7 @@ I'm interested in devleoping efficient models for recommendation system (e.g. CT
 
 ## Conference Papers:
 
-1. **Time-aware Multi-interest Capsule Network for Sequential Recommendation**  [pdf](\{\{site.url\}\}/files/sdm.pdf)
+1. **Time-aware Multi-interest Capsule Network for Sequential Recommendation**  [pdf]({{site.url}}/files/sdm.pdf)
 
    **Zhikai Wang**,Yanyan Shen
 
