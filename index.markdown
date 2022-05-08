@@ -21,8 +21,14 @@ I'm interested in devleoping efficient models for recommendation system (e.g. CT
 
 ## Conference Papers:
 
-1. **Time-aware Multi-interest Capsule Network for Sequential Recommendation**  [pdf]({{site.url}}/files/sdm.pdf)
+1. [**Time-aware Multi-interest Capsule Network for Sequential Recommendation**](https://epubs.siam.org/doi/abs/10.1137/1.9781611977172.63)  [pdf]({{site.url}}/files/sdm.pdf)
 
    **Zhikai Wang**,Yanyan Shen
 
    *SDM2022*
+   
+   [**Key joints selection and spatiotemporal mining for skeleton-based action recognition**](https://ieeexplore.ieee.org/abstract/document/8451483) [pdf]({{site.url}}/files/ICIP.pdf)
+   
+   **Zhikai Wang**, Chongyang Zhang, Wu Luo, Weiyao Lin
+   
+   *ICIP2018*
