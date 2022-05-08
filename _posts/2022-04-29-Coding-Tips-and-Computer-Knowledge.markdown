@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Coding Tips and Computer Knowledge"
-date:   2022-01-29 16:58:04 +0800
+date:   2022-04-29
 categories: jekyll update
 ---
 ## Introduction

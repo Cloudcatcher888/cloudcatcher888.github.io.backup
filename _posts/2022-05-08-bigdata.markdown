@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "bigdata"
+date:   2022-05-08
+categories: jekyll update
+---
+# 安装
+
+下载虚拟机：[https://pan.baidu.com/s/1KH1pWB01E4NCzqFuFdHJsQ?pwd=3aq7](https://pan.baidu.com/s/1KH1pWB01E4NCzqFuFdHJsQ?pwd=3aq7) 提取码: 3aq7
+
+安装文档：[推荐环境使用教程](\{\{site.url\}\}/files/rec.pdf)
+
