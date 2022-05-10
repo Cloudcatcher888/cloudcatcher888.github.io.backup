@@ -21,8 +21,9 @@ categories: jekyll update
   22/05/10 17:48:16 WARN hive.metastore: Failed to connect to the MetaStore Server...
   22/05/10 17:48:17 WARN metadata.Hive: Failed to access metastore. This class should not accessed in runtime.
   org.apache.hadoop.hive.ql.metadata.HiveException: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+```
 
-​	需要删除master节点的spark根目录下的metastore_db中的左右lck文件（缓存），然后重启spark，hive元数据。
+  需要删除master节点的spark根目录下的metastore_db中的左右lck文件（缓存），然后重启spark，hive元数据。
 
 * `jps` 列举出来的 `main` 是 hbase-shell 的进程。`RunJar`是hive的进程。`sparksubmit`是spark的application进程，如果有父进程在（bash或者jupyter notebook）在，用ps -ef 查看可以看父进程的pid，需要杀掉父进程再杀子进程。
 * 尽量让pyspark里的程序运行完成，完成后如果想要重开spark application，可以重启jupyter的笔记本（不是重启jupyter服务器）。
