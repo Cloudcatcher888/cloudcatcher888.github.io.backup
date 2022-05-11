@@ -28,3 +28,4 @@ categories: jekyll update
 * `jps` 列举出来的 `main` 是 hbase-shell 的进程。`RunJar`是hive的进程。`sparksubmit`是spark的application进程，如果有父进程在（bash或者jupyter notebook）在，用ps -ef 查看可以看父进程的pid，需要杀掉父进程再杀子进程。
 * 尽量让pyspark里的程序运行完成，完成后如果想要重开spark application，可以重启jupyter的笔记本（不是重启jupyter服务器）。
 * spark 的webUI端口是4040，但是会跳转到8088yarn的地址，这时候注意调整ip地址，有可能还是虚拟机的ip。
+* 有时spark会缺少hive中的jar包，导致hive shell中可以正常运行的命令在spark sql中报noclass的错误：例如hcatalog json格式解析包的缺失。可以采用`spark.sparkContext.addPyFile("path/to/jar")`来临时加入jar包，但是要在spark环境创建时加入，因此需要重启jupyter，重建一个新的sparkapplication实例。
