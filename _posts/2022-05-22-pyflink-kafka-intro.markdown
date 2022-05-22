@@ -12,7 +12,7 @@ categories: jekyll update
 
 [flink1.15](https://www.apache.org/dyn/closer.lua/flink/flink-1.15.0/flink-1.15.0-bin-scala_2.12.tgz)
 
-[jdk 11](121.4.16.168:5000/jdk-11.0.15.jdk.zip)
+[jdk 11](http://121.4.16.168:5000/jdk-11.0.15.jdk.zip)
 
 [flink-sql-connector-kafka-1.15.0.jar](https://repo.maven.apache.org/maven2/org/apache/flink/flink-sql-connector-kafka/1.15.0/flink-sql-connector-kafka-1.15.0.jar)
 
