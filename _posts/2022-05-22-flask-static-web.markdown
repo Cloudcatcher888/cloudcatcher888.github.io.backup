@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flask-Static-Web"
+title:  "Flask Static Web"
 date:   2022-05-22
 categories: jekyll update
 ---
