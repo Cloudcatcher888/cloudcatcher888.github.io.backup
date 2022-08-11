@@ -10,21 +10,21 @@ categories: jekyll update
 
 * 2019  MIMN   基于NTM神经图灵机 KDD
 
-		基于memory，每产生一条交互记录就会去attention地写多头memory，同时也会去attention地读多头memory（分为擦除和增加）以用于训练更新参数。上线以后多头memory就作为用户表征。
-
-		缺点： cannothandle 10000 seq  This is because encoding all user historical behaviors into a fixed size memory matrix causes massive noise tobe contained in the memory units.
+  基于memory，每产生一条交互记录就会去attention地写多头memory，同时也会去attention地读多头memory（分为擦除和增加）以用于训练更新参数。上线以后多头memory就作为用户表征。
+	
+  缺点： cannothandle 10000 seq  This is because encoding all user historical behaviors into a fixed size memory matrix causes massive noise tobe contained in the memory units.
 
 * 2019 HPMN Hierarchical RNN SIGIR
 
-		用Hierachical RNN去生成multi scope的memory，读取memory依然保持NTM的方式。
-
-		缺点：memory不是针对多兴趣，是对序列不同粒度的抽象，存在信息冗余的风险。
+  用Hierachical RNN去生成multi scope的memory，读取memory依然保持NTM的方式。
+	
+  缺点：memory不是针对多兴趣，是对序列不同粒度的抽象，存在信息冗余的风险。
 
 * 2019 SIM search base的方法
 
-		先基于类别索引（或者物品相似度）检索出长序列中所有和target item同类的interated item，构成子序列，再看成短序列问题
-
-		缺点：非常明显，没有把user representation的更新和target item解耦开来，不存在Ur的概念，也不存在增量更新Ur的可能，性能上不如其他解耦的方法。
+  先基于类别索引（或者物品相似度）检索出长序列中所有和target item同类的interated item，构成子序列，再看成短序列问题
+	
+  缺点：非常明显，没有把user representation的更新和target item解耦开来，不存在Ur的概念，也不存在增量更新Ur的可能，性能上不如其他解耦的方法。
 
 * 2019 MIND 胶囊网络 CIKM
 
@@ -32,7 +32,7 @@ categories: jekyll update
 
 * 2022 LimaRec 自注意力模型（线性版本）arxiv
 
-		利用线性自注意力模型可以解耦user representation和target item，同时有新的序列也可以融合进user representation中，实现增量更新Ur。和MIMN和HPMN达到相同目的的前提下使用了表达能力更强的自注意力模型。
+  利用线性自注意力模型可以解耦user representation和target item，同时有新的序列也可以融合进user representation中，实现增量更新Ur。和MIMN和HPMN达到相同目的的前提下使用了表达能力更强的自注意力模型。
 
   | method  | incremental Ur update | long seq | multi interest   | decouple | retrain |
   | ------- | --------------------- | -------- | ---------------- | -------- | ------- |
