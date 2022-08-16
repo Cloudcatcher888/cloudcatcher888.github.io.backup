@@ -10,7 +10,7 @@ categories: jekyll update
 
   基于memory，每产生一条交互记录就会去attention地写多头memory，同时也会去attention地读多头memory（分为擦除和增加）以用于训练更新参数。上线以后多头memory就作为用户表征。
 
-  缺点： cannothandle 10000 seq  This is because encoding all user historical behaviors into a fixed size memory matrix causes massive noise tobe contained in the memory units.无法处理超长序列，原因是采用了固定个数的memory，当序列过长时会储存大量噪声（by SIM）
+  缺点：无法处理超长序列，原因是采用了固定个数的memory，当序列过长时会储存大量噪声（by SIM）
 
   ![image-20220816114541983]({{site.url}}/images/image-20220816114541983.png)
 
@@ -44,7 +44,7 @@ categories: jekyll update
 
   缺点：无法融合新的序列，有新的序列需要在整个序列上重新计算所有表征
 
-  ![image-20220816114759418]({{site.url}}/images/image-20220816114759418.png)
+  ![image-20220816115939959]({{site.url}}/images/image-20220816115939959.png)
 
 * 2022 LimaRec 自注意力模型（线性版本）arxiv
 
