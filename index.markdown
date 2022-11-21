@@ -21,13 +21,23 @@ I'm interested in devleoping efficient models for recommendation system (e.g. CT
 
 ## Conference Papers:
 
-1. [**Time-aware Multi-interest Capsule Network for Sequential Recommendation**](https://epubs.siam.org/doi/abs/10.1137/1.9781611977172.63)  [pdf]({{site.url}}/files/sdm.pdf)
+1. [**Incremental Learning for Multi-interest Sequential Recommendation**]  [pdf]({{site.url}}/files/icde.pdf)
+
+   **Zhikai Wang**,Yanyan Shen
+
+   *ICDE2023(accept rate: 19.3%)*
+
+2. [**Feature Staleness Aware Incremental Learning for CTR prediction**]  [pdf]({{site.url}}/files/fesail.pdf)
+
+   **Zhikai Wang**,Yanyan Shen
+
+3. [**Time-aware Multi-interest Capsule Network for Sequential Recommendation**](https://epubs.siam.org/doi/abs/10.1137/1.9781611977172.63)  [pdf]({{site.url}}/files/sdm.pdf)
 
    **Zhikai Wang**,Yanyan Shen
 
    *SDM2022*
    
-   [**Key joints selection and spatiotemporal mining for skeleton-based action recognition**](https://ieeexplore.ieee.org/abstract/document/8451483) [pdf]({{site.url}}/files/ICIP.pdf)
+4. [**Key joints selection and spatiotemporal mining for skeleton-based action recognition**](https://ieeexplore.ieee.org/abstract/document/8451483) [pdf]({{site.url}}/files/ICIP.pdf)
    
    **Zhikai Wang**, Chongyang Zhang, Wu Luo, Weiyao Lin
    
