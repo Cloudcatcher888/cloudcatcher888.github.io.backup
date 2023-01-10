@@ -4,51 +4,54 @@ title:  "Multi-Interest Modeling"
 date:   2022-08-10
 categories: jekyll update
 ---
-## 现有工作发表纪年：
+## Awesome Multi-Interest Modeling Paper List:
 
-* 2019  MIMN   基于NTM神经图灵机 KDD
+* 2019  MIMN   NTM based KDD
 
-  基于memory，每产生一条交互记录就会去attention地写多头memory，同时也会去attention地读多头memory（分为擦除和增加）以用于训练更新参数。上线以后多头memory就作为用户表征。
+  Based on the memory, every time an interaction record is generated, the multi-head memory will be written with attention, and at the same time, the multi-head memory will be read with attention (divided into erasure and addition) for training and updating parameters. After going online, the long memory will be used as a user representation.
 
-  缺点：无法处理超长序列，原因是采用了固定个数的memory，当序列过长时会储存大量噪声（by SIM）
+  Disadvantages: Unable to handle very long sequences, because a fixed number of memory is used, and a large amount of noise will be stored when the sequence is too long (by SIM)
 
   ![image-20220816114541983]({{site.url}}/images/image-20220816114541983.png)
 
 * 2019 HPMN Hierarchical RNN SIGIR
 
-  用Hierachical RNN去生成multi scope的memory，读取memory依然保持NTM的方式。
+  Use Hierachical RNN to generate multi scope memory, and read the memory in the NTM way.
 
-  缺点：memory不是针对多兴趣，是对序列不同粒度的抽象，存在信息冗余的风险。
-
+  Disadvantages: memory is not aimed at multiple interests, it is an abstraction of different granularities of sequences, and there is a risk of information redundancy.
+  
   ![image-20220816114449543]({{site.url}}/images/image-20220816114449543.png)
 
-* 2019 SIM search base的方法
+* 2019 SIM search base method
 
-  先基于类别索引（或者物品相似度）检索出长序列中所有和target item同类的interated item，构成子序列，再看成短序列问题
+  First retrieve all interated items similar to the target item in the long sequence based on the category index (or item similarity), form a subsequence, and then treat it as a short sequence problem
 
-  缺点：非常明显，没有把user representation的更新和target item解耦开来，不存在Ur的概念，也不存在增量更新Ur的可能，性能上不如其他解耦的方法。
+  Disadvantages: It is very obvious that the update of user representation and target item are not decoupled, there is no concept of Ur, and there is no possibility of incrementally updating Ur, and the performance is not as good as other decoupling methods.
+
 
   ![image-20220816114356130]({{site.url}}/images/image-20220816114356130.png)
 
-* 2019 MIND 胶囊网络 CIKM
+* 2019 MIND capsule network CIKM
 
-  利用胶囊网络解耦user representation和target item
+  Use capsule network to decouple user representation and target item
 
-  缺点：无法融合新的序列，有新的序列需要在整个序列上重新计算所有表征
+  Disadvantages: New sequences cannot be fused, and new sequences need to recalculate all representations on the entire sequence
 
   ![image-20220816114616543]({{site.url}}/images/image-20220816114616543.png)
 
-* 2020 ComiRec 胶囊网络+自注意力模型 KDD
+* 2020 ComiRec capsule network+self attention  KDD
 
-  利用胶囊网络或者自注意力模型解耦user representation和target item，相比MIND，增加了一些[Exploitation & Exploration](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/N3n7aegr6wYIhCF7yeSSSg)平衡的探索
+  Use capsule network or self-attention model to decouple user representation and target item. Compared with MIND, some [Exploitation & Exploration](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/N3n7aegr6wYIhCF7yeSSSg) The Exploration of Balance
 
-  缺点：无法融合新的序列，有新的序列需要在整个序列上重新计算所有表征
+
+Disadvantages: New sequences cannot be fused, and new sequences need to recalculate all representations on the entire sequence
 
   ![image-20220816115939959]({{site.url}}/images/image-20220816115939959.png)
 
-* 2022 LimaRec 自注意力模型（线性版本）arxiv
+* 2022 LimaRec Linear Self Attention arxiv
 
-  利用线性自注意力模型可以解耦user representation和target item，同时有新的序列也可以融合进user representation中，实现增量更新Ur。和MIMN和HPMN达到相同目的的前提下使用了表达能力更强的自注意力模型。
+  The linear self-attention model can be used to decouple user representation and target item. At the same time, new sequences can also be integrated into user representation to realize incremental update Ur. On the premise of achieving the same purpose as MIMN and HPMN, a more expressive self-attention model is used.
+
 
   ![image-20220816113937762]({{site.url}}/images/image-20220816113937762.png)
   
@@ -65,14 +68,14 @@ categories: jekyll update
   
   
 
-## 核心思想：
+## Main Idea:
 
-1 前提是序列建模，主要目的是解决序列模型推断时耗时，存储开销大的问题。
+1 The premise is sequence modeling, and the main purpose is to solve the problem of time-consuming sequence model inference and large storage overhead.
 
-2 核心是取消了DIEN在序列中计算attention，使得物品表征和用户表征的计算分离开来。
+2 The core is to cancel the calculation of attention by DIEN in the sequence, so that the calculation of item representation and user representation is separated.
 
-3  之所以引入多兴趣，是因为在上面的思想基础上，如果只用一个向量作为用户的表征太弱，并且用户天然具有多个兴趣，用多个向量表示也更为直观。
+3 The reason why multiple interests are introduced is that based on the above ideas, if only one vector is used as a user representation is too weak, and users naturally have multiple interests, it is more intuitive to use multiple vectors to represent.
 
-## 缺陷
+## Limitations:
 
-多兴趣建模的过往工作始终没有解决多兴趣自适应更新（往大了说没考虑模型参数增量更新）的问题。如果只是简单地在一开始给一个很大的兴趣数K，以往工作也大多证明了在K非常大时模型性能反而会下降，说明这样粗暴的方式是行不通的。（需要过一段时间输入整段序列重新训练模型）
+  The past work of multi-interest modeling has not solved the problem of multi-interest adaptive update (incremental update of model parameters is not considered). If you simply give a large interest number K at the beginning, most of the previous work has proved that the performance of the model will decrease when K is very large, which shows that such a crude method is not feasible. (It takes a while to input the entire sequence to retrain the model)

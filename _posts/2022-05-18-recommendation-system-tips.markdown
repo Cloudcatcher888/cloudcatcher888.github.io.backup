@@ -4,11 +4,13 @@ title:  "Recommendation System Tips"
 date:   2022-05-18
 categories: jekyll update
 ---
-# 推荐系统若干细节问题
 
-## auc和ndcg分别在什么时候用到？
+# Some details of the recommendation system
 
-推荐系统评价时，经常遇到两组指标，一组是AUC和Logloss（有负样本），另一组是Recall，HitRate和NDCG（无负样本，需随机采样），两组指标往往分开出现，具体用哪一组和数据集中是否有负样本有关（与模型是否考虑序列，排序模型还是召回模型无关），有负样本的数据集往往称为点击率预估问题，进一步讲本质是因为有负样本的场景是用户被动接受曝光，用户选择某几个物品进行点击，此时负样本的分布可认为与用户偏好无关的（虽然模型会倾向于推送用户喜欢的物品，这个牵涉到因果和bias的问题，暂且不表），无负样本的场景基于评分或review数据集等显式数据集转化得到，负样本需要随机采样。
+## When are auc and ndcg used?
+
+When recommending system evaluation, two groups of indicators are often encountered, one is AUC and Logloss (with negative samples), and the other is Recall, HitRate and NDCG (without negative samples, random sampling is required). These two groups of indicators often appear separately. Which group to use is related to whether there are negative samples in the data set (it has nothing to do with whether the model considers sequence, sorting model or recall model). Data sets with negative samples are often called click-through rate estimation problems. The scene of the sample is that the user passively accepts exposure, and the user selects certain items to click. At this time, the distribution of negative samples can be considered to have nothing to do with user preferences (although the model tends to push items that users like, this involves causality and bias. problem, not listed for the time being), the scene without negative samples is obtained based on the conversion of explicit data sets such as scoring or review data sets, and negative samples need to be randomly sampled.
+
 
 
 
