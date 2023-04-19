@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Daniel Wong's Site
-email: ludlethwang@icloud.com
+title: Daniel Wong's Homepage
+email: tony__cc@outlook.com
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: DanielWong404
+# twitter_username: DanielWong404
 github_username:  Cloudcatcher888
 
 # Build settings
