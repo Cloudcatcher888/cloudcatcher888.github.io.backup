@@ -35,7 +35,7 @@ I'm interested in devleoping efficient models for recommendation system (e.g. CT
 
    <div align=center><img width = '300' height ='350' src ="images/ijcai.png"/></div>
 
-2. **Feature Staleness Aware Incremental Learning for CTR prediction**  [pdf]({{site.url}}/files/fesail.pdf)
+2. **Feature Staleness Aware Incremental Learning for CTR prediction**  [pdf]({{site.url}}/files/ijcai.pdf)
 
    **Zhikai Wang**,Yanyan Shen, Zibin Zhang, Kangyi Lin
 
