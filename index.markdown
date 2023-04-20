@@ -11,7 +11,7 @@ layout: home
 
 
 
-I am a PhD at SEIEE, Shanghai Jiao Tong University, where I was advised by Prof. Yanyan Shen.I will graduate in 2024. Before that, I obtained my bachelor degree at Shanghai Jiao Tong University in 2019.
+I am a PhD at SEIEE, Shanghai Jiao Tong University, where I was advised by Prof. Yanyan Shen. I will graduate in 2024. Before that, I obtained my bachelor degree at Shanghai Jiao Tong University in 2019.
 
 
 
