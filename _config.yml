@@ -23,7 +23,7 @@ email: tony__cc@outlook.com
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: DanielWong404
-github_username:  Cloudcatcher888
+github_username:  github
 
 # Build settings
 theme: minima
