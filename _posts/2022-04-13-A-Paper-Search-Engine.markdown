@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My Paper Search Engine !!"
+title:  "A Paper Search Engine"
 date:   2022-04-13
 categories: jekyll update
 ---
