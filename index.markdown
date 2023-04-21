@@ -4,21 +4,12 @@
 
 layout: home
 ---
-
-<div align=center><img width = '150' height ='250' src ="images/portrait.jpeg"/></div>
-
-# <center>Daniel Wong (王智恺)</center>
-
-I am a fourth-year PhD (graduate in 2024) @ Data Driven Software Technology Lab, Shanghai Jiao Tong University, where I was supervised by Prof. Yanyan Shen. 
-
-Before that, I earned my Bachelor's Degree at Shanghai Jiao Tong University in 2019.
-
 <html>
 <div style="width:90%; margin:0 auto; overflow:auto; _display:inline-block;">
     <div style="width:120px; float:left; background:#FFF"><img width = '120' height ='200' src ="images/portrait.jpeg"/></div>
     <div style=" margin-left:130px; background:#FFF">
       <b>Daniel Wong (王智恺)</b>
-      <br>
+      <p>
   Sept. 2019-Present, PhD candidate (graduate in June 2024) @ <a href="https://ddst.sjtu.edu.cn">Data Driven Software Technology Lab</a>, <a href="https://www.cs.sjtu.edu.cn/">Department of Computer Science and Engineering</a>, <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University, Shanghai, China 200240</a>
   <br>
 supervised by <a href='https://www.cs.sjtu.edu.cn/~shen-yy/'>Prof. Yanyan Shen</a>. 
@@ -26,6 +17,7 @@ supervised by <a href='https://www.cs.sjtu.edu.cn/~shen-yy/'>Prof. Yanyan Shen</
 Sept. 2015-July 2019, Bachelor of Engineering at Shanghai Jiao Tong University. 
 </div>
 </div>
+
 </html>
 
 
